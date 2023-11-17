@@ -18,6 +18,11 @@ plugins {
     id("com.harleyoconnor.autoupdatetool") version "1.0.0"
 }
 
+apply {
+    from("https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle")
+    from("https://gist.githubusercontent.com/Harleyoc1/4d23d4e991e868d98d548ac55832381e/raw/applesiliconfg.gradle")
+}
+
 repositories {
     maven("https://ldtteam.jfrog.io/ldtteam/modding/")
     maven("https://www.cursemaven.com") {
@@ -84,37 +89,39 @@ dependencies {
     // Not sure if we need this one, what is a "forge" anyway?
     minecraft("net.minecraftforge:forge:$mcVersion-${property("forgeVersion")}")
     // BYG requires this
-    runtimeOnly(fg.deobf("curse.maven:terrablender-563928:3957976"))
+    runtimeOnly(fg.deobf("curse.maven:terrablender-563928:4205732"))
     // Compile BYG and DT, of course.
-    implementation(fg.deobf("curse.maven:BYG-247560:4036050"))
-    //implementation(fg.deobf("curse.maven:dynamictrees-252818:4458396"))
-    implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
+    implementation(fg.deobf("curse.maven:BYG-247560:4602115"))
+    implementation(fg.deobf("curse.maven:dynamictrees-252818:4777775"))
+    //implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
 
     // At runtime, use DT+ for BYG's cacti.
-    //implementation(fg.deobf("curse.maven:dynamictreesplus-478155:4458646"))
-    implementation(fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-$mcVersion:${property("dynamicTreesPlusVersion")}"))
+    implementation(fg.deobf("curse.maven:dynamictreesplus-478155:4745346"))
+    //implementation(fg.deobf("com.ferreusveritas.dynamictreesplus:DynamicTreesPlus-$mcVersion:${property("dynamicTreesPlusVersion")}"))
 
     /////////////////////////////////////////
     /// Runtime Dependencies (optional)
     /////////////////////////////////////////
 
     // At runtime, use the full Hwyla mod.
-    runtimeOnly(fg.deobf("curse.maven:jade-324717:3970956"))
+    //runtimeOnly(fg.deobf("curse.maven:jade-324717:3970956"))
 
     // At runtime, use the full JEI mod.
-    runtimeOnly(fg.deobf("mezz.jei:jei-$mcVersion:${property("jeiVersion")}"))
+    compileOnly(fg.deobf("mezz.jei:jei-$mcVersion-forge-api:${property("jeiVersion")}"))
+    compileOnly(fg.deobf("mezz.jei:jei-$mcVersion-common-api:${property("jeiVersion")}"))
+    runtimeOnly(fg.deobf("mezz.jei:jei-$mcVersion-forge:${property("jeiVersion")}"))
 
     // At runtime, use CC for creating growth chambers.
     runtimeOnly(fg.deobf("org.squiddev:cc-tweaked-$mcVersion:${property("ccVersion")}"))
 
     // At runtime, get rid of experimental settings warning screen.
-    runtimeOnly(fg.deobf("curse.maven:ShutUpExperimentalSettings-407174:3188120"))
+    runtimeOnly(fg.deobf("curse.maven:ShutUpExperimentalSettings-407174:3759881"))
 
     // At runtime, use suggestion provider fix mod.
-    runtimeOnly(fg.deobf("com.harleyoconnor.suggestionproviderfix:SuggestionProviderFix-1.18.1:${property("suggestionProviderFixVersion")}"))
+    runtimeOnly(fg.deobf("com.harleyoconnor.suggestionproviderfix:SuggestionProviderFix-1.19:${property("suggestionProviderFixVersion")}"))
 
     // At runtime, use snow coated to allow snow and vines on leaves
-    runtimeOnly(fg.deobf("curse.maven:snow-coated-843893:4626429"))
+    //runtimeOnly(fg.deobf("curse.maven:snow-coated-843893:4626429"))
 }
 
 tasks.jar {
