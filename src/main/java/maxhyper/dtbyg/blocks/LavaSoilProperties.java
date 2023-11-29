@@ -34,6 +34,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Optional;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class LavaSoilProperties extends SoilProperties {
 
     public static final TypedRegistry.EntryType<SoilProperties> TYPE = TypedRegistry.newType(LavaSoilProperties::new);

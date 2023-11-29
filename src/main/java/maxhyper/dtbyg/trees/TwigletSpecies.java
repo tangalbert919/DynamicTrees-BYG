@@ -7,6 +7,8 @@ import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
 import net.minecraft.resources.ResourceLocation;
 
+import com.ferreusveritas.dynamictrees.tree.species.Species.LogsAndSticks;
+
 public class TwigletSpecies extends Species {
 
     public static final TypedRegistry.EntryType<Species> TYPE = createDefaultType(TwigletSpecies::new);

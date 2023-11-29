@@ -44,7 +44,7 @@ public class SideBranchPlaceEventHandler {
     @SubscribeEvent
     public static void onPlayerRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
 
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         InteractionHand hand = event.getHand();
         ItemStack heldItem = player.getItemInHand(hand);
 
@@ -57,7 +57,7 @@ public class SideBranchPlaceEventHandler {
         }
         if (bloomBranch == null) return;
 
-        Level world = event.getWorld();
+        Level world = event.getLevel();
         BlockPos branchPos = event.getPos();
         BlockState state = world.getBlockState(branchPos);
 

@@ -6,11 +6,11 @@ import net.minecraft.ResourceLocationException;
 import net.minecraft.client.renderer.texture.MissingTextureAtlasSprite;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraftforge.client.model.IModelLoader;
+import net.minecraftforge.client.model.geometry.IGeometryLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class PalmLeavesModelLoader implements IModelLoader<PalmLeavesModelGeometry> {
+public class PalmLeavesModelLoader implements IGeometryLoader<PalmLeavesModelGeometry> {
 
     public static final Logger LOGGER = LogManager.getLogger();
 

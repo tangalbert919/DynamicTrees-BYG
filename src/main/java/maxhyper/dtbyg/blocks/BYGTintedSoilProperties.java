@@ -10,6 +10,8 @@ import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class BYGTintedSoilProperties extends SoilProperties {
 
     public static final TypedRegistry.EntryType<SoilProperties> TYPE = TypedRegistry.newType(BYGTintedSoilProperties::new);

@@ -14,7 +14,8 @@ import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
 import net.minecraft.world.level.levelgen.placement.BlockPredicateFilter;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
+//import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -41,6 +42,7 @@ public class VegetationReplacement {
 
     public static RegistryObject<PlacedFeature> WINDSWEPT_DESERT_VEGETATION_HOLDER = PLACED_FEATURES.register("windswept_desert_vegetation_no_vanilla_cacti", ()-> new PlacedFeature( WINDSWEPT_DESERT_VEGETATION.getHolder().orElseThrow(), VegetationPlacements.worldSurfaceSquaredWithCount(8)));
 
+    // TODO: BiomeLoadingEvent removed, use BiomeModifier
     public static void OnBiomeLoadingEvent (final BiomeLoadingEvent event){
         if (BYGBiomes.WINDSWEPT_DESERT.location().equals(event.getName()) &&
                 WINDSWEPT_DESERT_VEGETATION_HOLDER.getHolder().isPresent()){

@@ -8,6 +8,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import potionstudios.byg.common.block.BYGBlocks;
 import potionstudios.byg.common.block.end.impariusgrove.TreeBranchBlock;
 
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
+
 public class DynamicArisianBloomBranch extends TreeBranchBlock {
 
     public DynamicArisianBloomBranch(Properties builder) {

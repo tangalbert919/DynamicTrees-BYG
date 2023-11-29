@@ -42,6 +42,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
+import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import potionstudios.byg.BYGConstants;
