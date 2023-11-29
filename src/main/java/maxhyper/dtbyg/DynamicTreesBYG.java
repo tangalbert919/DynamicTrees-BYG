@@ -39,7 +39,7 @@ public class DynamicTreesBYG
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(SideBranchPlaceEventHandler.class);
 
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, DTBYGRegistries::onBiomeLoading);
+        //MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, DTBYGRegistries::onBiomeLoading);
 
         RegistryHandler.setup(MOD_ID);
         DTBYGRegistries.setup();

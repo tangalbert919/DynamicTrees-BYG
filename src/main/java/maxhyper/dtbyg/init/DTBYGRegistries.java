@@ -1,7 +1,6 @@
 package maxhyper.dtbyg.init;
 
 import com.ferreusveritas.dynamictrees.api.TreeHelper;
-import com.ferreusveritas.dynamictrees.api.applier.ApplierRegistryEvent;
 import com.ferreusveritas.dynamictrees.api.cell.CellKit;
 import com.ferreusveritas.dynamictrees.api.registry.RegistryHandler;
 import com.ferreusveritas.dynamictrees.api.registry.TypeRegistryEvent;
@@ -17,14 +16,11 @@ import com.ferreusveritas.dynamictrees.systems.genfeature.GenFeature;
 import com.ferreusveritas.dynamictrees.tree.family.Family;
 import com.ferreusveritas.dynamictrees.tree.species.Species;
 import com.ferreusveritas.dynamictrees.util.CommonVoxelShapes;
-import com.ferreusveritas.dynamictrees.util.MathHelper;
 import com.ferreusveritas.dynamictrees.worldgen.featurecancellation.TreeFeatureCanceller;
 import com.ferreusveritas.dynamictreesplus.systems.mushroomlogic.shapekits.MushroomShapeKit;
-import com.google.gson.JsonElement;
 import maxhyper.dtbyg.DynamicTreesBYG;
 import maxhyper.dtbyg.blocks.DynamicArisianBloomBranch;
 import maxhyper.dtbyg.blocks.LavaSoilProperties;
-import maxhyper.dtbyg.cancellers.VegetationReplacement;
 import maxhyper.dtbyg.cells.DTBYGCellKits;
 import maxhyper.dtbyg.fruits.EtherBulbsFruit;
 import maxhyper.dtbyg.genfeatures.DTBYGGenFeatures;
@@ -35,14 +31,10 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.event.world.BiomeLoadingEvent;
-import net.minecraftforge.common.world.ForgeBiomeModifiers;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import potionstudios.byg.BYGConstants;
@@ -50,7 +42,7 @@ import potionstudios.byg.common.block.BYGBlocks;
 import potionstudios.byg.common.world.feature.config.BYGMushroomConfig;
 import potionstudios.byg.common.world.feature.config.BYGTreeConfig;
 import potionstudios.byg.common.world.feature.config.GiantFlowerConfig;
-import potionstudios.byg.common.world.feature.gen.overworld.trees.structure.TreeFromStructureNBTConfig;
+import corgitaco.corgilib.world.level.feature.gen.configurations.TreeFromStructureNBTConfig;
 
 import java.util.function.Supplier;
 
@@ -176,8 +168,8 @@ public class DTBYGRegistries {
         event.getRegistry().registerAll(GIANT_FLOWER_CANCELLER);
     }
 
-    public static void onBiomeLoading(final BiomeLoadingEvent event){
+    /*public static void onBiomeLoading(final BiomeLoadingEvent event){
         VegetationReplacement.OnBiomeLoadingEvent(event);
-    }
+    }*/
 
 }

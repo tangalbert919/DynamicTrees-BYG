@@ -18,10 +18,7 @@ public class PalmLeavesModelLoader implements IGeometryLoader<PalmLeavesModelGeo
     private static final String TEXTURES = "textures";
 
     @Override
-    public void onResourceManagerReload(ResourceManager resourceManager) { }
-
-    @Override
-    public PalmLeavesModelGeometry read(JsonDeserializationContext deserializationContext, JsonObject modelObject) {
+    public PalmLeavesModelGeometry read( JsonObject modelObject, JsonDeserializationContext deserializationContext) {
         final JsonObject textures = this.getTexturesObject(modelObject);
         return new PalmLeavesModelGeometry(getTextureLocation(textures, FROND));
     }

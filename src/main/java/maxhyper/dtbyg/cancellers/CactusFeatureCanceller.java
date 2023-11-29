@@ -1,10 +1,11 @@
 package maxhyper.dtbyg.cancellers;
 
+import com.ferreusveritas.dynamictrees.api.worldgen.BiomePropertySelectors;
 import com.ferreusveritas.dynamictrees.api.worldgen.FeatureCanceller;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.CactusBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
@@ -12,9 +13,9 @@ import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConf
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.stateproviders.SimpleStateProvider;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.Random;
-import java.util.Set;
 
 /**
  * @author Max Hyper
@@ -31,8 +32,8 @@ public class CactusFeatureCanceller<T extends Block> extends FeatureCanceller {
     }
 
     @Override
-    public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, Set<String> namespaces) {
-        ResourceLocation featureResLoc = configuredFeature.feature().getRegistryName();
+    public boolean shouldCancel(ConfiguredFeature<?, ?> configuredFeature, BiomePropertySelectors.NormalFeatureCancellation normalFeatureCancellation) {
+        ResourceLocation featureResLoc = ForgeRegistries.FEATURES.getKey(configuredFeature.feature());
         if (featureResLoc == null)
             return false;
 
@@ -43,7 +44,7 @@ public class CactusFeatureCanceller<T extends Block> extends FeatureCanceller {
             featureConfig = placedFeature.feature().value().config();
         }
 
-        if (!(featureConfig instanceof BlockColumnConfiguration blockColumnConfiguration) || !namespaces.contains(featureResLoc.getNamespace())) {
+        if (!(featureConfig instanceof BlockColumnConfiguration blockColumnConfiguration) || !normalFeatureCancellation.shouldCancelNamespace(featureResLoc.getNamespace())) {
             return false;
         }
 
@@ -54,7 +55,7 @@ public class CactusFeatureCanceller<T extends Block> extends FeatureCanceller {
             }
 
             // SimpleStateProvider does not use Random or BlockPos in getState, but we still provide non-null values just to be safe
-            if (this.cactusBlockClass.isInstance(stateProvider.getState(PLACEHOLDER_RAND, BlockPos.ZERO).getBlock())) {
+            if (this.cactusBlockClass.isInstance(stateProvider.getState(RandomSource.create(), BlockPos.ZERO).getBlock())) {
                 return true;
             }
         }

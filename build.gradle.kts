@@ -93,6 +93,9 @@ dependencies {
     // Compile BYG and DT, of course.
     implementation(fg.deobf("curse.maven:BYG-247560:4602115"))
     implementation(fg.deobf("curse.maven:dynamictrees-252818:4777775"))
+    // Required BYG dependencies
+    implementation(fg.deobf("curse.maven:corgilib-693313:4554111"))
+    runtimeOnly(fg.deobf("curse.maven:geckolib-388172:4407241"))
     //implementation(fg.deobf("com.ferreusveritas.dynamictrees:DynamicTrees-$mcVersion:${property("dynamicTreesVersion")}"))
 
     // At runtime, use DT+ for BYG's cacti.
