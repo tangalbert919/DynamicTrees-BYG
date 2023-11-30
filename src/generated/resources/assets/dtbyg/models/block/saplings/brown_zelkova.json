@@ -2,7 +2,7 @@
   "parent": "dynamictrees:block/smartmodel/sapling",
   "textures": {
     "particle": "byg:block/brown_zelkova_leaves",
-    "log": "byg:block/zelkova_log",
+    "log": "byg:block/zelkova/log",
     "leaves": "byg:block/brown_zelkova_leaves"
   }
 }

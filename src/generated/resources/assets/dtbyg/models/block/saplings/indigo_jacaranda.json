@@ -2,7 +2,7 @@
   "parent": "dynamictrees:block/smartmodel/sapling",
   "textures": {
     "particle": "byg:block/indigo_jacaranda_leaves",
-    "log": "byg:block/jacaranda_log",
+    "log": "byg:block/jacaranda/log",
     "leaves": "byg:block/indigo_jacaranda_leaves"
   }
 }

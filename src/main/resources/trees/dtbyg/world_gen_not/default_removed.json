@@ -512,7 +512,7 @@
       "density": [ 0.2 ],
       "chance": 0.2
     }
-  }
+  },
 
   {
     "select": {
@@ -609,10 +609,10 @@
   },
   {
     "select": {
-      "name": "byg:mangrove.*"
+      "name": "byg:white_mangrove.*"
     },
     "apply": {
-      "species": "dtbyg:mangrove",
+      "species": "dtbyg:white_mangrove",
       "density": [ 1.0 ],
       "chance": 1.0
     }
@@ -1055,7 +1055,7 @@
       "name": "byg:white_mangrove_marshes"
     },
     "apply": {
-      "species": "dtbyg:mangrove",
+      "species": "dtbyg:white_mangrove",
       "density": [ 1.0 ],
       "chance": 1.0
     }

@@ -1,8 +1,8 @@
 {
   "parent": "dynamictrees:block/smartmodel/sapling",
   "textures": {
-    "particle": "byg:block/cika_leaves",
-    "log": "byg:block/cika_log",
-    "leaves": "byg:block/cika_leaves"
+    "particle": "byg:block/cika/leaves",
+    "log": "byg:block/cika/log",
+    "leaves": "byg:block/cika/leaves"
   }
 }

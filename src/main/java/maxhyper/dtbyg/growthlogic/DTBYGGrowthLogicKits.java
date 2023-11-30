@@ -22,7 +22,7 @@ public class DTBYGGrowthLogicKits {
     public static final GrowthLogicKit VARIATE_HEIGHT = new VariateHeightLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "variate_height"));
     public static final GrowthLogicKit SYTHIAN_FUNGUS = new SythianLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "sythian_fungus"));
     public static final GrowthLogicKit CYPRESS = new CypressLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "cypress"));
-    public static final GrowthLogicKit MANGROVE = new MangroveLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "mangrove"));
+    public static final GrowthLogicKit MANGROVE = new MangroveLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "white_mangrove"));
     public static final GrowthLogicKit TAPERED_WITHERED = new TaperedWitheredOakLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "tapered_withered"));
     public static final GrowthLogicKit ANCIENT_LOGIC = new AncientLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "ancient"));
     public static final GrowthLogicKit MEGA_RAINBOW_EUCALYPTUS = new MegaRainbowEucalyptusLogic(new ResourceLocation(DynamicTreesBYG.MOD_ID, "mega_rainbow_eucalyptus"));

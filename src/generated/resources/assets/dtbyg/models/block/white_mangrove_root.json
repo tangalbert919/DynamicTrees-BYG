@@ -1,6 +1,6 @@
 {
   "loader": "dynamictrees:root",
   "textures": {
-    "bark": "byg:block/mangrove_log"
+    "bark": "byg:block/white_mangrove/log"
   }
 }

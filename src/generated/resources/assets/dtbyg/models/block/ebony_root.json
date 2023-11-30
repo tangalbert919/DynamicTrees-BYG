@@ -1,6 +1,6 @@
 {
   "loader": "dynamictrees:root",
   "textures": {
-    "bark": "byg:block/ebony_log"
+    "bark": "byg:block/ebony/log"
   }
 }
