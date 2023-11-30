@@ -13,13 +13,7 @@
     "wet": 0.75
   },
   "perfect_biomes": { "name": ".*evergreen.*" },
-  "primitive_saplings": [
-    "byg:holly_sapling",
-    {
-      "sapling_item": "byg:holly_berries",
-      "can_craft_seed_to_sapling": false
-    }
-  ],
+  "primitive_saplings": "byg:holly_sapling",
   "mega_species": "dtbyg:mega_holly",
   "fruits": [
     "dtbyg:holly_berries"
