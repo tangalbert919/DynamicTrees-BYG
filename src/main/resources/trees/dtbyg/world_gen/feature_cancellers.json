@@ -3,8 +3,8 @@
     "__comment": "Cancel standard tree features from the overworld.",
     "select": { "name": "byg.*" },
     "cancellers": {
-      "types": [ "dtbyg:tree", "tree", "dtbyg:fungus" ],
-      "namespaces": ["byg", "minecraft"]
+      "types": [ "dtbyg:tree", "tree", "dtbyg:fungus", "dtbyg:tree_structure" ],
+      "namespaces": ["byg", "corgilib", "minecraft"]
     }
   },
   {
