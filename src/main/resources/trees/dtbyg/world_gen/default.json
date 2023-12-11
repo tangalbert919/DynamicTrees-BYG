@@ -1,5 +1,19 @@
 [
   {
+    "__comment": "Spawn palm trees in overworld beaches",
+    "select": { "name": ".*beach.*" },
+    "apply": {
+      "species": {
+        "random": {
+          "dtbyg:palm": 15,
+          "dtbyg:mega_palm": 1
+        }
+      },
+      "density": [ 1.0 ],
+      "chance": 0.02
+    }
+  },
+  {
     "select": {
       "name": "byg:maple_taiga"
     },
@@ -157,30 +171,6 @@
       },
       "density": [ 0.3 ],
       "chance": 0.5
-    }
-  },
-  {
-    "select": { "category": "beach", "name": "minecraft:.*" },
-    "apply": {
-      "species": {
-        "random": {
-          "dtbyg:palm": 15,
-          "dtbyg:mega_palm": 1
-        }
-      }
-    }
-  },
-  {
-    "select": { "category": "beach", "name": "byg:.*" },
-    "apply": {
-      "species": {
-        "random": {
-          "dtbyg:palm": 15,
-          "dtbyg:mega_palm": 1
-        }
-      },
-      "density": [ 1.0 ],
-      "chance": 0.02
     }
   },
   {
